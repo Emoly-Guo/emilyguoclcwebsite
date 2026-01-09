@@ -1,0 +1,115 @@
+/* Body as a full-screen flex container */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #064968;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ensures full height */
+  position: relative; /* needed for link positioning */
+}
+
+/* Card wrapper to keep content centered */
+.about-card {
+  display: flex;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 900px;
+  width: 90%;
+  overflow: hidden;
+  z-index: 1; /* make sure it’s above background but under link if needed */
+}
+
+/* Left image */
+.about-card .image {
+  flex: 1 1 300px;
+  aspect-ratio: 1 / 1; /* keeps it square and flexible */
+  overflow: hidden;
+}
+
+.about-card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right content */
+.about-card .content {
+  flex: 2 1 400px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* keeps content vertically centered in card */
+}
+
+/* Headings */
+.about-card .content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.about-card .content h2 {
+  margin: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2779a0;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraph */
+.about-card .content p {
+  font-size: 0.95rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Social icons */
+.about-card .content .social-icons i {
+  font-size: 1.2rem;
+  margin-right: 15px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.about-card .content .social-icons i:hover {
+  color: #57b4df;
+}
+
+/* Link box */
+.link-box {
+  background-color: #b5d3ff;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.20);
+  font-weight: bold;
+
+  position: fixed; /* stays in the corner, independent of card */
+  bottom: 20px;
+  left: 20px;
+
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 15px;
+  z-index: 2; /* above card */
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card .content {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

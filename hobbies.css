@@ -1,0 +1,126 @@
+/* Reset & basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #cfeefc;
+}
+
+/* Top header */
+.top {
+    background: linear-gradient(#106d99, #3789af);
+    text-align: center;
+    padding: 2vh 2vw;
+    flex: 0 0 auto;
+}
+
+.top h1 {
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 100px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Bars - each as a block */
+.bar {
+    position: relative;
+    margin: 1vh 4vw;       /* space between blocks */
+    flex: 1 1 0;           /* take equal height */
+    min-height: 20vh;       /* ensures small screens work */
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Overlay for readability */
+.bar::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: 0;
+}
+
+/* Number floating on top-left */
+.number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 48px;
+    height: 48px;
+    background: #f58014;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Content above overlay */
+.bar .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Text styles */
+.content h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.content p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.4;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Specific backgrounds */
+.sports {
+    background-image: url("https://www.playgroundequipment.com/storage/image-gallery/cms-images/badminton_1428046_1280.webp");
+}
+
+.music {
+    background-image: url("https://capian.co/assets/images/uploads/blog/ckia8-music-lockdown-1fa0fb8b.jpg");
+}
+
+.cooking {
+    background-image: url("https://www.thespruceeats.com/thmb/y7CCzW-33mzQYOkU9PsarTpLEh8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-653331766-5a5412be9802070037dd0491.jpg");
+}
+
+.back-link{
+    background-color: #d9e8ff;
+    position: fixed;
+    top: 35px;
+    left: 20px;
+    color: #000000;
+    padding: 14px;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.20);
+    border-radius: 15px;
+    font-weight: bold;
+}

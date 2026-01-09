@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header stays at top */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #8abdff;
+    color: white;
+}
+
+/* Container for links */
+.container {
+    margin-top: 350px; /* space below fixed header */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Link boxes */
+.link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 180px;
+    height: 120px;
+
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    color: black;
+    background-color: #d6e4ff;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.link-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+p{
+    color: black
+}
+
+.page-content {
+    margin-top: 120px; /* adjust if header is taller */
+    padding: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-content a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.back-link{
+    background-color: #b5d3ff;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: #000;
+    padding: 14px;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.20);
+    border-radius: 15px;
+
+}
