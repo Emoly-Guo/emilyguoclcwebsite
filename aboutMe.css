@@ -99,18 +99,18 @@ body {
 }
 
 .back-link {
-    display: inline-block; /* important so background and padding work */
-    background-color: #b5d3ff;
-    color: #000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.20);
-    font-weight: bold;
-
-    position: fixed;
+    display: inline-block;      /* makes padding and background visible */
+    position: fixed;            /* locks it to the screen */
     bottom: 20px;
     left: 20px;
+    z-index: 9999;              /* very high, above card */
+    
+    background-color: #b5d3ff;  /* button background */
+    color: #000;                 /* text color */
     padding: 14px;
     font-size: 14px;
     border-radius: 15px;
-    z-index: 1000; /* ensure it’s above everything */
-    text-decoration: none; /* remove underline */
+    font-weight: bold;
+    text-decoration: none;       /* removes underline */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
